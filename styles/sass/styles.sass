@@ -78,13 +78,15 @@ a:hover
 input
   display: block
   width: 100%
-  margin-bottom: 23px
+  margin-top: 23px
   font-weight: $font-weight-semibold
   font-size: 0.9em
   padding: 15px 20px
   border-radius: 5px
   border: 1px solid #e3e3e3
   color: $col-neutral-dark
+input:first-of-type
+  margin-top: 0
 input:hover
   border: 1px solid $col-neutral-light
 input:focus
@@ -93,6 +95,7 @@ input:focus
 button
   background: $col-secondary-cta
   border: none
+  margin-top: 23px
   text-transform: uppercase
   font-size: 1em
   color: white
@@ -117,6 +120,20 @@ button:active
   padding: 0 20px
   line-height: 1.8
 
+form .error
+  color: $col-primary
+  font-size: 0.7em
+  display: block
+  text-align: right
+  padding-top: 5px
+  font-style: italic
+form .input-error
+  border: 2px solid $col-primary
+  color: $col-neutral-dark
+  background: url("../../assets/icon-error.svg") no-repeat
+  background-position: calc(100% - 20px) 50%
+  background-size: 25px
+
 /*
  * Minor breakpoint, over 600px wide
  */
@@ -130,7 +147,9 @@ button:active
  */
 @media screen and (min-width: 800px)
   body
-    padding: 0 20px
+    padding: 0 40px
+    background: url("../../assets/bg-intro-desktop.png") left top
+    background-color: $col-primary
   h1
     font-size: 3em
     line-height: 1.1
@@ -151,3 +170,5 @@ button:active
     padding: 40px 40px 25px 40px
   input
     padding: 15px 30px
+  form .input-error
+    background-position: calc(100% - 30px) 50%

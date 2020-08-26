@@ -75,13 +75,17 @@ a:hover {
 input {
   display: block;
   width: 100%;
-  margin-bottom: 23px;
+  margin-top: 23px;
   font-weight: 600;
   font-size: 0.9em;
   padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid #e3e3e3;
   color: #3e3c49;
+}
+
+input:first-of-type {
+  margin-top: 0;
 }
 
 input:hover {
@@ -96,6 +100,7 @@ input:focus {
 button {
   background: #38cc8c;
   border: none;
+  margin-top: 23px;
   text-transform: uppercase;
   font-size: 1em;
   color: white;
@@ -129,6 +134,23 @@ button:active {
   line-height: 1.8;
 }
 
+form .error {
+  color: #ff7a7a;
+  font-size: 0.7em;
+  display: block;
+  text-align: right;
+  padding-top: 5px;
+  font-style: italic;
+}
+
+form .input-error {
+  border: 2px solid #ff7a7a;
+  color: #3e3c49;
+  background: url("../../assets/icon-error.svg") no-repeat;
+  background-position: calc(100% - 20px) 50%;
+  background-size: 25px;
+}
+
 /* * Minor breakpoint, over 600px wide
  * */
 @media screen and (min-width: 500px) {
@@ -141,7 +163,9 @@ button:active {
  * */
 @media screen and (min-width: 800px) {
   body {
-    padding: 0 20px;
+    padding: 0 40px;
+    background: url("../../assets/bg-intro-desktop.png") left top;
+    background-color: #ff7a7a;
   }
 
   h1 {
@@ -174,6 +198,10 @@ button:active {
 
   input {
     padding: 15px 30px;
+  }
+
+  form .input-error {
+    background-position: calc(100% - 30px) 50%;
   }
 }
 
