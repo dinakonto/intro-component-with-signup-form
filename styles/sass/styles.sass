@@ -12,7 +12,7 @@ $font-weight-semibold: 600
 $font-weight-bold: 700
 $font-base-size: 16px
 
-$shadow: 0px 8px 0px rgba(0,0,0,0.15)
+$shadow: 0px 7px 0px rgba(0,0,0,0.15)
 
 /*
  * BASE LAYOUT
@@ -21,12 +21,14 @@ $shadow: 0px 8px 0px rgba(0,0,0,0.15)
   box-sizing: border-box
   font-family: $font-stack
 body
+  display: grid
   margin: 0
   font-size: $font-base-size
-  background: url("../../assets/bg-intro-mobile.png") no-repeat center top
+  background: url("../../assets/bg-intro-mobile.png") center top
   background-color: $col-primary
   text-align: center
   padding: 70px 25px
+  min-height: 100vh
 h1
   font-weight: $font-weight-semibold
   font-size: 1.8em
@@ -37,18 +39,22 @@ a
   text-decoration: none
   color: $col-primary
   font-weight: $font-weight-bold
+  display: inline-block
 
 // TEXT CONTENT
 #text-content
   color: white
-  // padding: 45px 0
+  margin: 0 auto
+  max-width: 540px
+  margin-bottom: 70px
 
 // CALLOUT
 .callout
+  margin: 0 auto
+  max-width: 540px
   background: $col-secondary-accent
   color: white
-  padding: 2px
-  font-size: 0.9em
+  padding: 2px 23px
   border-radius: 10px
   margin-bottom: 25px
   -webkit-box-shadow: $shadow
@@ -59,6 +65,8 @@ a
 
 // CARD / FORM
 .card
+  margin: 0 auto
+  max-width: 540px
   background: white
   border-radius: 10px
   padding: 23px
@@ -91,3 +99,38 @@ button
   color: $col-neutral-light
   padding: 0 20px
   line-height: 1.8
+
+/*
+ * Minor breakpoint, over 600px wide
+ */
+@media screen and (min-width: 500px)
+  .callout-line2
+    display: inline-block
+
+/*
+ * MAJOR BREAKPOINT
+ * Large, over 800px wide
+ */
+@media screen and (min-width: 800px)
+  body
+    padding: 0 20px
+  h1
+    font-size: 3em
+    line-height: 1.1
+  #wrapper
+    margin: 0 auto
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    height: 100%
+    max-width: 1110px
+  #text-content
+    text-align: left
+    margin-bottom: 0
+  .callout
+    padding: 2px 40px
+  .card
+    padding: 40px 40px 25px 40px
+  input
+    padding: 15px 30px
