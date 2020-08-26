@@ -40,6 +40,8 @@ a
   color: $col-primary
   font-weight: $font-weight-bold
   display: inline-block
+a:hover
+  text-decoration: underline
 
 // TEXT CONTENT
 #text-content
@@ -82,6 +84,12 @@ input
   padding: 15px 20px
   border-radius: 5px
   border: 1px solid #e3e3e3
+  color: $col-neutral-dark
+input:hover
+  border: 1px solid $col-neutral-light
+input:focus
+  border: 1px solid $col-neutral-dark
+  outline: none
 button
   background: $col-secondary-cta
   border: none
@@ -94,6 +102,15 @@ button
   border-radius: 5px
   padding: 15px
   border-bottom: 4px solid hsl(154, 59%, 47%)
+button:hover, button:focus
+  cursor: pointer
+  opacity: 0.8
+button:focus
+  outline: none
+button:active
+  border-bottom: none
+  background: hsl(154, 59%, 47%)
+  border-top: 4px solid hsl(154, 59%, 44%)
 .fineprint
   font-size: 0.7em
   color: $col-neutral-light
